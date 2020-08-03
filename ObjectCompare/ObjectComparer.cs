@@ -31,8 +31,8 @@ namespace ObjectCompare
                 if (obj1Prop != null && obj2Prop != null)
                     Pairs.Add(
                         ValuePair.Create(
-                                                Object1.GetType().GetProperty(obj1Prop.Name).GetValue(Object1),
-                                                Object2.GetType().GetProperty(obj2Prop.Name).GetValue(Object2)
+                            Object1.GetType().GetProperty(obj1Prop.Name).GetValue(Object1),
+                            Object2.GetType().GetProperty(obj2Prop.Name).GetValue(Object2)
                     ));
             }
         }
@@ -94,8 +94,7 @@ namespace ObjectCompare
             if (Prop2 is null)
                 return false;
 
-            return Prop1 == Prop2;
+            return Prop1.Equals(Prop2);
         }
     }
-
 }
